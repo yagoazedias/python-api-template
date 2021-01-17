@@ -10,3 +10,5 @@ ns = api.namespace('api/v1', description='TODO operations')
 
 if app.config['ENV'] == environment.DEVELOPMENT:
     app.config.from_pyfile('../development.cfg', silent=True)
+else:
+    app.config['PORT'] = os.getenv('PORT')

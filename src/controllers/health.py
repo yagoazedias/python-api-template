@@ -1,5 +1,5 @@
 import os
-from config.infra import ns, app
+from config.infra import ns
 from flask_restplus import Resource
 
 from loguru import logger
