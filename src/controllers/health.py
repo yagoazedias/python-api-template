@@ -1,5 +1,4 @@
-import os
-from config.infra import ns
+from env.infra import ns, app
 from flask_restplus import Resource
 
 from loguru import logger
@@ -10,5 +9,5 @@ from loguru import logger
 class Health(Resource):
 
     def get(self):
-        logger.debug(dict(os.environ))
+        logger.debug(dict(app.config))
         return {"status": "ok"}

@@ -1,8 +1,7 @@
 import unittest
 import json
 
-from config.infra import app
-from controllers.health import Health
+from env.infra import app
 
 
 class TestHealthController(unittest.TestCase):
